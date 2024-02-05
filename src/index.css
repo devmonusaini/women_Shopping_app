@@ -1,0 +1,72 @@
+/* body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: "Roboto Mono", monospace;
+	/* font-optical-sizing: auto; */
+	/* font-weight: 400; */
+	/* font-style: normal; */
+}
+
+/* .lato-regular {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+} */
+
+.linkStyle {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	padding-bottom: 4px;
+	overflow: hidden;
+}
+.linkStyle::before {
+	position: absolute;
+	bottom: -2px;
+	content: "";
+	left: o;
+	height: 5px;
+	width: 100%;
+	background-color: black;
+	transform: translateX(-100%);
+}
+
+.linkStyle:hover::before {
+	width: 100%;
+	transform: translateX(0%);
+	transition: 0.5s;
+}
+
+.slider-wrapper {
+	display: flex;
+	transition: transform 0.5s ease; /* Add transition for smooth movement */
+}
+
+.slide {
+	opacity: 1;
+	transition-duration: 1s ease;
+	background-color: rgb(22, 158, 158);
+}
+
+.slide.active {
+	opacity: 1;
+	transition-duration: 1s;
+	transform: scale(1.08);
+}
